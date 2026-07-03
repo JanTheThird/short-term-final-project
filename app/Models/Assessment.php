@@ -16,6 +16,6 @@ class Assessment extends Model
         'mobility_level',
         'strength_level',
         'flexibility_level',
-        'remarks_level'
+        'remarks'
     ];
 }

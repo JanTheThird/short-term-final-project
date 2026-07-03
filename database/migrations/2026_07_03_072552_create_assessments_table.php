@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. I guess
      */
     public function up(): void
     {
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('mobility_level');
             $table->integer('strength_level');
             $table->integer('flexibility_level');
-            $table->text('remarks_level');
+            $table->text('remarks');
         });
     }
 
