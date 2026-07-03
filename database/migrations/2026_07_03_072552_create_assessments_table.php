@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('mobility_level');
             $table->integer('strength_level');
             $table->integer('flexibility_level');
+            $table->integer('endurance_level');
+            $table->integer('balance_level');
             $table->text('remarks');
         });
     }
