@@ -14,4 +14,10 @@ class Specialization extends Model
         'name',
         'description',
     ];
+
+    public function therapists()
+    {
+        return $this->hasMany(Therapist::class);
+    }
+
 }

@@ -11,7 +11,23 @@ class Therapist extends Model
     use HasFactory;
 
     protected $fillable = [
-        'system_user_id',
+        'user_id',
         'specialization_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function specialization()
+    {
+        return $this->belongsTo(Specialization::class);
+    }
+
+    public function requests()
+    {
+        return $this->hasMany(Request::class);
+    }
+
 }

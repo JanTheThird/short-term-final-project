@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SystemUser;
-use App\Http\Requests\StoreSystemUserRequest;
-use App\Http\Requests\UpdateSystemUserRequest;
+use App\Models\RehabilitationPlanExercise;
+use App\Http\Requests\StoreRehabilitationPlanExerciseRequest;
+use App\Http\Requests\UpdateRehabilitationPlanExerciseRequest;
 
-class SystemUserController extends Controller
+class RehabilitationPlanExerciseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class SystemUserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSystemUserRequest $request)
+    public function store(StoreRehabilitationPlanExerciseRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class SystemUserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SystemUser $systemUser)
+    public function show(RehabilitationPlanExercise $rehabilitationPlanExercise)
     {
         //
     }
@@ -43,7 +43,7 @@ class SystemUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SystemUser $systemUser)
+    public function edit(RehabilitationPlanExercise $rehabilitationPlanExercise)
     {
         //
     }
@@ -51,7 +51,7 @@ class SystemUserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSystemUserRequest $request, SystemUser $systemUser)
+    public function update(UpdateRehabilitationPlanExerciseRequest $request, RehabilitationPlanExercise $rehabilitationPlanExercise)
     {
         //
     }
@@ -59,7 +59,7 @@ class SystemUserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SystemUser $systemUser)
+    public function destroy(RehabilitationPlanExercise $rehabilitationPlanExercise)
     {
         //
     }

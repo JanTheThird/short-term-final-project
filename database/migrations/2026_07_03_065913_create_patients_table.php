@@ -13,15 +13,24 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
+
+            $table->foreignId('medical_condition_id')
+                ->constrained('medical_conditions')
+                ->cascadeOnDelete();
+
+            $table->enum('gender', ['Male', 'Female'])->nullable();
+
+            $table->date('birthdate')->nullable();
+
+                       $table->string('address')->nullable();
+
+            $table->string('emergency_contact', 20)->nullable();
+
             $table->timestamps();
-
-            $table->foreignId('system_user_id')->constrained('system_users');
-            $table->foreignId('medical_condition_id')->constrained('medical_conditions');
-
-            $table->enum('gender', ['male', 'female'])->nullable();
-            $table->string('birthdate')->nullable();
-            $table->string('address')->nullable();
-            $table->string('emergency_contact')->nullable();
         });
     }
 

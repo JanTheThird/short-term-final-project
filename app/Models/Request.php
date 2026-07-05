@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Request extends Model
 {
-    /** @use HasFactory<\Database\Factories\RequestFactory> */
     use HasFactory;
 
     protected $fillable = [
@@ -16,4 +15,19 @@ class Request extends Model
         'concern',
         'status',
     ];
+
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class);
+    }
+
+    public function therapist()
+    {
+        return $this->belongsTo(Therapist::class);
+    }
+
+    public function assessment()
+    {
+        return $this->hasOne(Assessment::class);
+    }
 }

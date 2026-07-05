@@ -12,11 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('medical_conditions', function (Blueprint $table) {
+            
             $table->id();
             $table->timestamps();
 
             $table->string('name')->unique();
-            $table->string('description');
+            $table->text('description')->nullable();
+            
         });
     }
 

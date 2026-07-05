@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('therapists', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
 
-            $table->foreignId('system_user_id')->constrained('system_users');
-            $table->foreignId('specialization_id')->constrained('specializations');
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
+
+            $table->foreignId('specialization_id')
+                ->constrained('specializations')
+                ->cascadeOnDelete();
+
+            $table->timestamps();
         });
     }
 

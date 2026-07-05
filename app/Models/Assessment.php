@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Assessment extends Model
 {
-    /** @use HasFactory<\Database\Factories\AssessmentFactory> */
     use HasFactory;
 
     protected $fillable = [
@@ -18,6 +17,16 @@ class Assessment extends Model
         'flexibility_level',
         'endurance_level',
         'balance_level',
-        'remarks'
+        'remarks',
     ];
+
+    public function request()
+    {
+        return $this->belongsTo(Request::class);
+    }
+
+    public function rehabilitationPlan()
+    {
+        return $this->hasOne(RehabilitationPlan::class);
+    }
 }

@@ -14,4 +14,10 @@ class MedicalCondition extends Model
         'name',
         'description',
     ];
+
+    public function patients()
+    {
+        return $this->hasMany(Patient::class);
+    }
+
 }
