@@ -26,4 +26,9 @@ class Exercise extends Model
             'duration_minutes'
         )->withTimestamps();
     }
+
+    public function rehabilitationPlanExercises()
+    {
+        return $this->hasMany(RehabilitationPlanExercise::class);
+    }
 }

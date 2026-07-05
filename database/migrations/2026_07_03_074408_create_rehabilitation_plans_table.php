@@ -32,6 +32,11 @@ return new class extends Migration
                 'Discontinued'
             ])->default('Active');
 
+            $table->unique([
+                'rehabilitation_plan_id',
+                'exercise_id'
+            ]);
+
             $table->timestamps();
         });
     }

@@ -41,4 +41,9 @@ class RehabilitationPlan extends Model
     {
         return $this->hasMany(TherapySession::class);
     }
+
+    public function rehabilitationPlanExercises()
+    {
+        return $this->hasMany(RehabilitationPlanExercise::class);
+    }
 }
